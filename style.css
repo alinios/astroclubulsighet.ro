@@ -1,0 +1,244 @@
+/* ---------- Global v3---------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #222;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Global link colors */
+a {
+  color: #0c71c3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  color: #000;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 80px;
+  width: 173px;
+  background: url("images/logo.jpg") center center / contain no-repeat;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  color: #00000099;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #00000066;
+  text-decoration: none;
+}
+
+.nav a.active {
+  border-bottom: 2px solid #00000099;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #00000099;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #000000;
+  color: #eee;
+  padding: 12px 0;
+  font-size: 0.9em;
+}
+
+.site-footer .container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: block;
+  text-align: left;
+}
+
+/* =======================================================
+   ===============  Main Page Layout  ====================
+   ======================================================= */
+.main-page {
+  background: url("images/background-main.png") center center / cover no-repeat;
+}
+
+.content {
+  flex: 1;
+}
+
+.content.main-page {
+  padding: 140px 0 80px;
+}
+
+.content.main-page .container {
+  display: block;
+}
+
+.text-block {
+  width: 60%;
+  background: rgba(255,255,255,0.8);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: justify;
+  color: #000000;
+}
+
+.main-title {
+  font-size: 1.6em;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.text-block p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* =======================================================
+   ===============  Istoric Page Layout  =================
+   ======================================================= */
+.istoric-page {
+  background: url("images/background-istoric.png") center bottom / cover no-repeat;
+}
+
+.content.istoric-page {
+  padding: 140px 0 80px;
+}
+
+.content.istoric-page .container {
+  display: flex;
+  justify-content: center;
+}
+
+.istoric-page .text-block {
+  width: 60%;
+  background: rgba(255,255,255,0.8);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: justify;
+  color: #000000;
+}
+
+/* =======================================================
+   ===============  Contact Page Layout  ================
+   ======================================================= */
+.contact-page {
+  background: url("images/background-contact.png") center bottom / cover no-repeat;
+}
+
+.content.contact-page {
+  padding: 140px 0 80px;
+}
+
+.content.contact-page .container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-page .text-block {
+  width: 60%;
+  background: rgba(255,255,255,0.8);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: justify;
+  color: #000000;
+}
+
+/* ---------- Responsive (mobile ≤767px) ---------- */
+@media (max-width: 767px) {
+  .nav ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: #fff;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 0;
+  }
+
+  .nav ul.open {
+    display: flex;
+  }
+
+  .nav li {
+    margin: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .content.main-page,
+  .content.istoric-page,
+  .content.contact-page {
+    padding: 120px 0 100px;
+  }
+
+  .content.main-page .container,
+  .content.istoric-page .container,
+  .content.contact-page .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-block,
+  .istoric-page .text-block,
+  .contact-page .text-block {
+    width: 90%;
+    margin: 0;
+    padding: 25px;
+  }
+
+  .main-title {
+    font-size: 1.4em;
+  }
+}
