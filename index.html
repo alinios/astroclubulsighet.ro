@@ -7,8 +7,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- DEPLOY TEST 2024-11-15 14:32 -->
-<!--#include virtual="/header.html" -->
+<header class="site-header">
+  <div class="container">
+    <div class="logo"></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="istoric.html">Istoric</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+  </div>
+</header>
   <main class="content main-page">
     <div class="container">
       <div class="text-block">
@@ -19,11 +30,10 @@
       </div>
     </div>
   </main>
-<!--#include virtual="/footer.html" -->
-    <script>
-    document.getElementById('menuToggle').onclick = () => {
-      document.querySelector('.nav ul').classList.toggle('open');
-    };
-  </script>
+<footer class="site-footer">
+  <div class="container">
+    <p>© Astroclubul SARM Sighet</p>
+  </div>
+</footer>
 </body>
 </html>
